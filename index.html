@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
+<title>Don Jones Creative — Marketing Strategy · Brand · Copy</title>
+<meta name="description" content="Don Jones Creative is a marketing and brand practice in Atlanta. Content strategy, brand, and copy — with the measurement built in.">
+<meta property="og:title" content="Don Jones Creative — Marketing Strategy · Brand · Copy">
+<meta property="og:description" content="Content strategy, brand, and copy — with the measurement built in. Selected work 2020–2026.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://donjonescreative.netlify.app">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: only light;
+    --navy: #16192B;
+    --red: #D6362B;
+    --paper: #FBF9F4;
+    --ink: #1E2130;
+    --steel: #6E7280;
+    --rule: #C9C4B8;
+    --tint: #F1EDE2;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; color-scheme: only light; }
+  @media (prefers-color-scheme: dark) {
+    html, body { background: #FBF9F4; color: #1E2130; }
+  }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Archivo", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* ============ TYPE ============ */
+  .display {
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    line-height: 0.96;
+    letter-spacing: 0.012em;
+    font-weight: 400;
+  }
+  .serif { font-family: "Newsreader", serif; }
+  .chyron {
+    display: inline-block;
+    font-family: "Archivo", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--paper);
+    background: var(--red);
+    padding: 6px 12px 5px 13px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+  .chyron.navy { background: var(--navy); }
+  .chyron.paper { background: var(--paper); color: var(--navy); }
+  a.chyron:hover, button.chyron:hover { filter: brightness(1.15); }
+
+  /* ============ NAV ============ */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--navy);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 24px;
+    border-bottom: 3px solid var(--red);
+  }
+  nav .brand {
+    font-family: "Anton", sans-serif;
+    color: var(--paper);
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+  nav .brand span { color: var(--red); }
+  nav .links { display: flex; gap: 6px; flex-wrap: wrap; }
+  nav .links a {
+    font-size: 10px; padding: 5px 10px 4px 11px;
+  }
+  @media (max-width: 640px) {
+    nav { padding: 10px 14px; }
+    nav .brand { font-size: 15px; }
+    nav .links a { font-size: 9px; padding: 4px 7px 3px 8px; letter-spacing: 0.16em; }
+  }
+
+  /* ============ HERO ============ */
+  header {
+    background: var(--navy);
+    color: var(--paper);
+    min-height: 100vh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 120px 6vw 90px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-mark {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.24em;
+    text-transform: uppercase; color: rgba(251,249,244,0.55);
+    border-bottom: 2px solid var(--paper);
+    padding-bottom: 10px; margin-bottom: 60px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  header h1 {
+    font-size: clamp(64px, 12vw, 170px);
+    margin-bottom: 32px;
+  }
+  header h1 .dot { color: var(--red); }
+  .hero-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+  .hero-tabs .chyron { font-size: 13px; padding: 10px 18px 9px 19px; }
+  .hero-note {
+    margin-top: 22px;
+    font-family: "Newsreader", serif;
+    font-style: italic;
+    color: rgba(251,249,244,0.6);
+    font-size: 15px;
+  }
+
+  /* ============ TICKER ============ */
+  .ticker-wrap {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    background: var(--red); overflow: hidden;
+    padding: 10px 0 9px;
+  }
+  .ticker-inner {
+    display: inline-block; white-space: nowrap;
+    font-weight: 700; font-size: 12px; letter-spacing: 0.28em;
+    text-transform: uppercase; color: var(--paper);
+    animation: tick 28s linear infinite;
+  }
+  @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ============ SECTIONS ============ */
+  section { padding: 90px 6vw; scroll-margin-top: 90px; }
+  @media (max-width: 640px) {
+    section { padding: 64px 6vw; scroll-margin-top: 150px; }
+  }
+  .section-head { margin-bottom: 48px; }
+  .section-head .kicker { margin-bottom: 30px; }
+  .section-head h2 {
+    font-size: clamp(38px, 6.4vw, 92px);
+    color: var(--navy);
+    line-height: 1.02;
+  }
+  @media (max-width: 640px) {
+    .section-head .kicker { margin-bottom: 22px; }
+    .section-head h2 { line-height: 1.06; }
+    .chyron { font-size: 10px; letter-spacing: 0.18em; padding: 6px 10px 5px 11px; }
+  }
+  .section-head h2 .dot { color: var(--red); }
+  .section-head p.lead {
+    font-family: "Newsreader", serif;
+    font-size: 19px; max-width: 640px; margin-top: 18px; color: var(--ink);
+  }
+  section.on-navy { background: var(--navy); color: var(--paper); }
+  section.on-navy .section-head h2 { color: var(--paper); }
+  section.on-navy .section-head p.lead { color: rgba(251,249,244,0.85); }
+  section.on-red { background: var(--red); color: var(--paper); }
+  section.on-red .section-head h2 { color: var(--paper); }
+  section.on-red .section-head h2 .dot { color: var(--navy); }
+  section.on-red .section-head p.lead { color: rgba(251,249,244,0.92); }
+
+  /* ============ CARD GRID ============ */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
+  }
+  .card {
+    background: var(--paper);
+    border: 2px solid var(--navy);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: flex; flex-direction: column;
+    text-align: left;
+    padding: 0; font-family: inherit;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 8px 8px 0 var(--red); }
+  .card .cover {
+    aspect-ratio: 16/9.2; overflow: hidden;
+    border-bottom: 2px solid var(--navy);
+    background: var(--navy);
+  }
+  .card .cover img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+  .card .body { padding: 18px 18px 20px; flex: 1; display: flex; flex-direction: column; }
+  .card .idx {
+    font-family: "Anton", sans-serif; color: var(--red);
+    font-size: 22px; margin-bottom: 6px;
+  }
+  .card h3 {
+    font-family: "Anton", sans-serif; text-transform: uppercase;
+    font-size: 24px; color: var(--navy); line-height: 1.02; margin-bottom: 8px;
+  }
+  .card .meta {
+    font-size: 10.5px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--steel); margin-bottom: 10px;
+  }
+  .card p.desc {
+    font-family: "Newsreader", serif; font-size: 14.5px; line-height: 1.5;
+    color: var(--ink); flex: 1;
+  }
+  .card .open {
+    margin-top: 14px; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--red);
+  }
+
+  /* ============ LINES THAT LAND ============ */
+  .lines { display: flex; flex-direction: column; gap: 34px; max-width: 900px; }
+  .quote {
+    border-left: 4px solid var(--paper); padding-left: 22px;
+    background: none; border-top: none; border-right: none; border-bottom: none;
+    text-align: left; cursor: pointer; font-family: inherit;
+    display: block; width: 100%; transition: padding-left 0.15s ease;
+  }
+  .quote:hover { padding-left: 30px; border-left-color: var(--navy); }
+  .quote .q {
+    font-family: "Newsreader", serif; font-weight: 500;
+    font-size: clamp(21px, 3.4vw, 32px); line-height: 1.24;
+    color: var(--paper); margin-bottom: 10px;
+  }
+  .quote .q em { font-style: italic; }
+  .quote .chyron { font-size: 10px; }
+
+  /* ============ CONTACT ============ */
+  .contact-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px; max-width: 760px; margin-top: 50px;
+  }
+  .contact-grid h4 {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--red);
+    border-top: 2px solid var(--paper); padding-top: 12px; margin-bottom: 12px;
+  }
+  .contact-grid p, .contact-grid a { color: var(--paper); font-size: 15.5px; line-height: 1.8; text-decoration: none; }
+  .contact-grid a:hover { color: var(--red); }
+
+  footer {
+    background: var(--navy); color: rgba(251,249,244,0.5);
+    padding: 20px 6vw; font-size: 10.5px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+    border-top: 1px solid rgba(251,249,244,0.15);
+  }
+
+  /* ============ VIEWER MODAL ============ */
+  .viewer {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(12,14,26,0.97);
+    display: none; flex-direction: column;
+  }
+  .viewer.open { display: flex; }
+  .viewer-top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px; gap: 10px; flex-wrap: wrap;
+    border-bottom: 2px solid var(--red);
+  }
+  .viewer-top .vtitle {
+    font-family: "Anton", sans-serif; text-transform: uppercase;
+    color: var(--paper); font-size: 17px; letter-spacing: 0.03em;
+  }
+  .viewer-top .vactions { display: flex; gap: 8px; align-items: center; }
+  .viewer-stage {
+    flex: 1; display: flex; align-items: center; justify-content: center;
+    padding: 18px; min-height: 0; position: relative;
+  }
+  .viewer-stage img {
+    max-width: 100%; max-height: 100%;
+    box-shadow: 0 12px 60px rgba(0,0,0,0.6);
+    user-select: none;
+  }
+  .vnav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: var(--red); color: var(--paper); border: none;
+    font-family: "Anton", sans-serif; font-size: 26px;
+    width: 52px; height: 52px; cursor: pointer; line-height: 1;
+  }
+  .vnav:hover { background: var(--paper); color: var(--navy); }
+  .vnav.prev { left: 14px; } .vnav.next { right: 14px; }
+  .vnav:disabled { opacity: 0.25; cursor: default; }
+  @media (max-width: 640px) {
+    .vnav { width: 42px; height: 42px; font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="#top">Don Jones Creative<span>.</span></a>
+  <div class="links">
+    <a class="chyron" href="#strategy">Strategy</a>
+    <a class="chyron" href="#brand">Brand</a>
+    <a class="chyron" href="#copy">Copy</a>
+    <a class="chyron" href="#ghostwriting">Ghostwriting</a>
+    <a class="chyron navy" style="border:1px solid rgba(251,249,244,0.4);" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="hero-mark">
+    <span>Selected Work · 2020 – 2026</span>
+    <span>Atlanta, Georgia</span>
+  </div>
+  <h1 class="display">Don Jones<br>Creative<span class="dot">.</span></h1>
+  <div class="hero-tabs">
+    <a class="chyron" href="#strategy">Marketing Strategy</a>
+    <a class="chyron paper" href="#brand">Brand</a>
+    <a class="chyron" href="#copy">Copy</a>
+    <a class="chyron" href="#ghostwriting">Ghostwriting</a>
+  </div>
+  <div class="ticker-wrap">
+    <div class="ticker-inner">
+      Strategy&nbsp;·&nbsp;Story&nbsp;·&nbsp;Copy&nbsp;·&nbsp;Don&nbsp;Jones&nbsp;Creative&nbsp;·&nbsp;Strategy&nbsp;·&nbsp;Story&nbsp;·&nbsp;Copy&nbsp;·&nbsp;Don&nbsp;Jones&nbsp;Creative&nbsp;·&nbsp;Strategy&nbsp;·&nbsp;Story&nbsp;·&nbsp;Copy&nbsp;·&nbsp;Don&nbsp;Jones&nbsp;Creative&nbsp;·&nbsp;Strategy&nbsp;·&nbsp;Story&nbsp;·&nbsp;Copy&nbsp;·&nbsp;Don&nbsp;Jones&nbsp;Creative&nbsp;·&nbsp;
+    </div>
+  </div>
+</header>
+
+<!-- ============ POSITIONING ============ -->
+<section id="about">
+  <div class="section-head">
+    <div class="kicker"><span class="chyron navy">Who I Am, What I Do</span></div>
+    <h2 class="display">Strategy, story &amp; copy that move audiences <span style="color:var(--red);">&mdash; and prove it in the plan<span class="dot">.</span></span></h2>
+    <p class="lead serif">Don Jones Creative is a marketing and brand practice based in Atlanta. Client work spans hospitality, restaurant, nonprofit, and film — everything from portfolio-scale content architectures to single-campaign copy. Before founding the practice, I wrote for millions of viewers on live national television at CNN — a discipline in absorbing complexity fast, then landing the meaning in a line.</p>
+  </div>
+</section>
+
+<!-- ============ STRATEGY ============ -->
+<section id="strategy" class="on-navy">
+  <div class="section-head">
+    <div class="kicker"><span class="chyron">01 · Marketing Strategy</span></div>
+    <h2 class="display">The engines behind the work<span class="dot">.</span></h2>
+    <p class="lead">Strategy engagements across hospitality, nonprofit, restaurant, and film. Tap any piece to read the full document.</p>
+  </div>
+  <div class="grid" id="grid-strategy"></div>
+</section>
+
+<!-- ============ BRAND ============ -->
+<section id="brand">
+  <div class="section-head">
+    <div class="kicker"><span class="chyron navy">02 · Brand</span></div>
+    <h2 class="display" style="color:var(--navy);">One object. A whole brand<span style="color:var(--red);">.</span></h2>
+    <p class="lead serif">The House Phone — a 125th-anniversary campaign that turns a Philadelphia nonprofit's invisible service into civic infrastructure: six free public phonebooths, a media brand, and a funnel, all working as one.</p>
+  </div>
+  <div class="grid" id="grid-brand"></div>
+</section>
+
+<!-- ============ COPY: LINES (highlight reel) ============ -->
+<section id="copy" class="on-red">
+  <div class="section-head">
+    <div class="kicker"><span class="chyron navy">03 · Copy</span></div>
+    <h2 class="display">Lines that land<span class="dot">.</span></h2>
+    <p class="lead">Sometimes the strategy is the sentence. Tap any line to open the piece it came from — then read the full work below.</p>
+  </div>
+  <div class="lines">
+    <button class="quote" data-doc="oped_hunger">
+      <div class="q">Hunger isn't the story. It's where the story starts.</div>
+      <span class="chyron navy">Op-Ed Centerpiece &nearr;</span>
+    </button>
+    <button class="quote" data-doc="lsh">
+      <div class="q">Pick up the phone. Philadelphia is calling.</div>
+      <span class="chyron navy">The House Phone · Hero Headline &nearr;</span>
+    </button>
+    <button class="quote" data-doc="lsh">
+      <div class="q">Hungry. Hurt. Homeless. Hopeless. Pick up.</div>
+      <span class="chyron navy">The House Phone · OOH Copy &nearr;</span>
+    </button>
+    <button class="quote" data-doc="glenda">
+      <div class="q">Their negligence hurt you. Let us help you hurt their wallet.</div>
+      <span class="chyron navy">Glenda Mitchell Law · Email Headline &nearr;</span>
+    </button>
+    <button class="quote" data-doc="pp_social">
+      <div class="q">There's no party like a (haunted) house party.</div>
+      <span class="chyron navy">Paperless Post · Social Copy &nearr;</span>
+    </button>
+    <button class="quote" data-doc="picnic">
+      <div class="q">Every city has restaurants. Few have a village table.</div>
+      <span class="chyron navy">Picnic · Positioning &nearr;</span>
+    </button>
+    <button class="quote" data-doc="places">
+      <div class="q">She was taught to be invisible. It becomes the thing that saves her.</div>
+      <span class="chyron navy">Places I Can't Go · Series Bible &nearr;</span>
+    </button>
+  </div>
+</section>
+
+<!-- ============ CLIENT COPY ============ -->
+<section id="clientcopy">
+  <div class="section-head">
+    <div class="kicker"><span class="chyron navy">Copy · Email, Social &amp; Direct Response</span></div>
+    <h2 class="display" style="color:var(--navy);">Different brand. Different voice. Same job<span style="color:var(--red);">.</span></h2>
+    <p class="lead serif">Short-form conversion copy across email, social, and direct response — invitations, fitness, and legal services. Each brand gets its own register; every piece has to earn a click.</p>
+  </div>
+  <div class="grid" id="grid-clientcopy"></div>
+</section>
+
+<!-- ============ EXECUTIVE GHOSTWRITING ============ -->
+<section id="ghostwriting">
+  <div class="section-head">
+    <div class="kicker"><span class="chyron navy">Copy · Executive Ghostwriting</span></div>
+    <h2 class="display" style="color:var(--navy);">Three leaders. Three voices. One summit<span style="color:var(--red);">.</span></h2>
+    <p class="lead serif">Bylined thought-leadership op-eds written for three different executives across three organizations — each in that leader's own voice, each making a different argument for the same table. Authored for the 2026 Philadelphia Food Summit and pitched to <em>The Philadelphia Citizen</em> and <em>Generocity</em>.</p>
+  </div>
+  <div class="grid" id="grid-ghostwriting"></div>
+</section>
+
+<!-- ============ CAMPAIGN COPY ============ -->
+<section id="campaign" class="on-navy">
+  <div class="section-head">
+    <div class="kicker"><span class="chyron">Copy · Campaign Systems</span></div>
+    <h2 class="display">Copy built to travel<span class="dot">.</span></h2>
+    <p class="lead">Out-of-home lines, campaign architecture, and franchise naming — the copy systems inside the work, not just the headline on top of it.</p>
+  </div>
+  <div class="grid" id="grid-campaign"></div>
+</section>
+
+<!-- ============ NARRATIVE ============ -->
+<section id="narrative">
+  <div class="section-head">
+    <div class="kicker"><span class="chyron navy">Copy · Narrative &amp; Screen</span></div>
+    <h2 class="display" style="color:var(--navy);">Resonance in every medium<span style="color:var(--red);">.</span></h2>
+    <p class="lead serif">Original development — series pitches, a limited-series bible, and a feature treatment. The long-form end of the same voice.</p>
+  </div>
+  <div class="grid" id="grid-narrative"></div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="on-navy" style="border-top: 3px solid var(--red); min-height: 70vh; display:flex; flex-direction:column; justify-content:center;">
+  <h2 class="display" style="font-size: clamp(56px, 10vw, 130px); color: var(--paper);">Ready when<br>you are<span class="dot" style="color:var(--red);">.</span></h2>
+  <div class="contact-grid">
+    <div>
+      <h4>Contact</h4>
+      <p>Donovan Jones<br>Atlanta, Georgia<br>
+      <a href="tel:6788185652">678-818-5652</a><br>
+      <a href="mailto:donovanjonesbiz@gmail.com">Donovanjonesbiz@gmail.com</a></p>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <p>Brand strategy &amp; positioning<br>Integrated campaign architecture<br>Content strategy &amp; operations<br>Copywriting, long &amp; short form<br>Pitch decks &amp; investor materials</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Don Jones Creative</span>
+  <span>Strategy · Story · Copy</span>
+</footer>
+
+<!-- ============ VIEWER ============ -->
+<div class="viewer" id="viewer" role="dialog" aria-modal="true">
+  <div class="viewer-top">
+    <div class="vtitle" id="vtitle">—</div>
+    <div class="vactions">
+      <span class="chyron navy" id="vcounter" style="border:1px solid rgba(251,249,244,0.35); cursor:default;">1 / 1</span>
+      <a class="chyron" id="vdownload" href="#" download>Download PDF</a>
+      <button class="chyron navy" id="vclose" style="border:1px solid rgba(251,249,244,0.35);">Close ✕</button>
+    </div>
+  </div>
+  <div class="viewer-stage" id="vstage">
+    <button class="vnav prev" id="vprev" aria-label="Previous page">‹</button>
+    <img id="vimg" src="" alt="Document page">
+    <button class="vnav next" id="vnext" aria-label="Next page">›</button>
+  </div>
+</div>
+
+<script>
+const DOCS = {
+  kassis:   { title: "The Visibility Engine",       meta: "Kassis & Co. × The M Movement · Strategy Deck",  desc: "Portfolio-wide content architecture for a Philadelphia hospitality group — three pillars, five business units, one revenue engine.", pages: 5,  dl: "downloads/The_Visibility_Engine.pdf" },
+  pryor:    { title: "In A Pryor Life",              meta: "Documentary Marketing · Strategy",               desc: "Four-pillar marketing strategy for an independent documentary — converting twenty years of search demand into audience.", pages: 13, dl: "downloads/In_A_Pryor_Life.pdf" },
+  summit:   { title: "Philadelphia Food Summit",     meta: "Content Strategy · June 2026",                   desc: "\u201COne shoot, many lives\u201D — content architecture that turns a single-day event into an evergreen asset library.", pages: 13, dl: "downloads/Philadelphia_Food_Summit.pdf" },
+  picnic:   { title: "Picnic Activations",           meta: "Restaurant Concepts · Philadelphia",             desc: "Three activation concepts, one mission: revenue, community, legacy — and the most talked-about table in the city.", pages: 12, dl: "downloads/Picnic_Activations.pdf" },
+  lsh:      { title: "The House Phone — Pitch",      meta: "Lutheran Settlement House × M Movement",         desc: "The full 16-page campaign pitch: six booths, a media brand, a tiered investment model built on recurring revenue.", pages: 16, dl: "downloads/The_House_Phone_Pitch.pdf" },
+  lsh_tldr: { title: "The House Phone — TL;DR",      meta: "Campaign One-Sheet",                             desc: "The whole campaign in three pages — the object, the funnel, and the ask.", pages: 3, dl: "downloads/The_House_Phone_TLDR.pdf" },
+  pp_sipsee:   { title: "Sip & See \u2014 Event Email",     meta: "Paperless Post · Email · Short-Form", desc: "Full email architecture for a baby-shower invitation line: subject, pretext, headline, and dek. \u201CSip. See. Celebrate.\u201D \u2014 and the world\u2019s tiniest host.", pages: 1, dl: "downloads/PaperlessPost_SipAndSee_Email.pdf" },
+  pp_wedding:  { title: "Love Is In Full Bloom",            meta: "Paperless Post · Email · Short-Form", desc: "Seasonal wedding invitation campaign. Subject line: \u201CThis isn\u2019t just a Summer Fling.\u201D Timeless design, timeless copy.", pages: 1, dl: "downloads/PaperlessPost_Wedding_Email.pdf" },
+  pp_social:   { title: "Seasonal Social Captions",         meta: "Paperless Post · Instagram · Social Copy", desc: "Platform-native captions for seasonal event invitations \u2014 sunflower-field dinners and \u201Cno party like a (haunted) house party.\u201D", pages: 1, dl: "downloads/PaperlessPost_Social_Copy.pdf" },
+  crunch:      { title: "One Size Fits All",                meta: "Crunch Fitness · Promotional Email", desc: "Offer-driven direct response: a gym experience you won\u2019t find anywhere else, for only $9.95/month. Price point, proof, and a free-pass CTA.", pages: 1, dl: "downloads/CrunchFitness_Promotional_Email.pdf" },
+  glenda:      { title: "Hurt Their Wallet",                meta: "Glenda Mitchell Law · Promotional Email", desc: "Personal-injury direct response written in second person from the first line. \u201CTheir negligence hurt you. Let us help you hurt their wallet.\u201D", pages: 1, dl: "downloads/GlendaMitchell_Promotional_Email.pdf" },
+  oped_hunger:  { title: "Hunger Isn't The Story",   meta: "Ghostwritten for Ericka Gaines · Anti-Violence Partnership of Philadelphia", desc: "Written in the voice of a community-empowerment director making the case for why an anti-violence organization belongs at a food summit. Food insecurity as the soil that grows instability, trauma, and the cycle of violence.", pages: 1, dl: "downloads/Hunger_Isnt_The_Story.pdf" },
+  oped_table:   { title: "Getting To The Table Was The Easy Part", meta: "Ghostwritten for Ken Myers · Co-Founder, M Movement", desc: "A founder's voice on the harder half of collaboration — honoring difference, extending grace, and the humility that turns a full room into a functioning one.", pages: 1, dl: "downloads/Getting_To_The_Table.pdf" },
+  oped_urgency: { title: "The Urgency of Connection", meta: "Ghostwritten for Ted Hewson · Co-Chair, Philadelphia Food Summit", desc: "A summit co-chair's argument that in a crisis, connection isn't a value — it's infrastructure. The piece that framed the entire event.", pages: 1, dl: "downloads/The_Urgency_Of_Connection.pdf" },
+  bte:      { title: "Behind The Eye",               meta: "Docuseries Pitch",                               desc: "The experiences shape the artist. The artist shapes the work. The work shapes the world.", pages: 17, dl: "downloads/Behind_The_Eye.pdf" },
+  places:   { title: "Places I Can't Go",            meta: "Limited Series Bible",                           desc: "She was taught to be invisible. It becomes the thing that saves her. Ten hours, five stages.", pages: 29, dl: "downloads/Places_I_Cant_Go.pdf" },
+  lsh_campaign:   { title: "The House Phone — Campaign Copy", meta: "OOH · Social · Franchise Naming", desc: "The copy system inside the campaign: the four H\u2019s OOH line, the \u201CI Am You\u201D paired-portrait format, and five named content franchises built to repeat.", pages: 16, dl: "downloads/The_House_Phone_Pitch.pdf", assets: "lsh" },
+  picnic_campaign:{ title: "Picnic — Concept Copy",            meta: "Restaurant Activation · Naming & Positioning", desc: "Three activation concepts named and positioned: The Omakase Experience, The Founder\u2019s Table, and The Picnic Table \u2014 each with its own voice and hook.", pages: 12, dl: "downloads/Picnic_Activations.pdf", assets: "picnic" },
+  rich:     { title: "RICH",                          meta: "Feature Film Treatment",                         desc: "A satirical social thriller. How much does a dollar really cost?", pages: 19, dl: "downloads/RICH.pdf" },
+};
+
+const GRIDS = {
+  "grid-strategy":     ["kassis", "pryor", "summit", "picnic"],
+  "grid-brand":        ["lsh", "lsh_tldr"],
+  "grid-clientcopy":   ["pp_sipsee", "pp_wedding", "pp_social", "crunch", "glenda"],
+  "grid-ghostwriting": ["oped_hunger", "oped_table", "oped_urgency"],
+  "grid-campaign":     ["lsh_campaign", "picnic_campaign"],
+  "grid-narrative":    ["bte", "places", "rich"],
+};
+
+// Build cards
+for (const [gridId, keys] of Object.entries(GRIDS)) {
+  const grid = document.getElementById(gridId);
+  keys.forEach((key, i) => {
+    const d = DOCS[key];
+    const card = document.createElement("button");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="cover"><img loading="lazy" src="assets/${d.assets || key}/1.jpg" alt="${d.title} cover"></div>
+      <div class="body">
+        <div class="idx">0${i + 1}</div>
+        <h3>${d.title}</h3>
+        <div class="meta">${d.meta} · ${d.pages} page${d.pages > 1 ? "s" : ""}</div>
+        <p class="desc">${d.desc}</p>
+        <div class="open">Open the full piece &nearr;</div>
+      </div>`;
+    card.addEventListener("click", () => openViewer(key));
+    grid.appendChild(card);
+  });
+}
+
+// Clickable lines → open source document
+document.querySelectorAll(".quote[data-doc]").forEach(el => {
+  el.addEventListener("click", () => openViewer(el.dataset.doc));
+});
+
+// Viewer
+const viewer = document.getElementById("viewer");
+const vimg = document.getElementById("vimg");
+const vtitle = document.getElementById("vtitle");
+const vcounter = document.getElementById("vcounter");
+const vdownload = document.getElementById("vdownload");
+const vprev = document.getElementById("vprev");
+const vnext = document.getElementById("vnext");
+let cur = { key: null, page: 1 };
+
+function render() {
+  const d = DOCS[cur.key];
+  const folder = d.assets || cur.key;
+  vimg.src = `assets/${folder}/${cur.page}.jpg`;
+  vtitle.textContent = d.title;
+  vcounter.textContent = `${cur.page} / ${d.pages}`;
+  vdownload.href = d.dl;
+  vprev.disabled = cur.page <= 1;
+  vnext.disabled = cur.page >= d.pages;
+  // preload neighbors
+  if (cur.page < d.pages) (new Image()).src = `assets/${folder}/${cur.page + 1}.jpg`;
+  if (cur.page > 1) (new Image()).src = `assets/${folder}/${cur.page - 1}.jpg`;
+}
+function openViewer(key) {
+  cur = { key, page: 1 };
+  render();
+  viewer.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function closeViewer() {
+  viewer.classList.remove("open");
+  document.body.style.overflow = "";
+}
+document.getElementById("vclose").addEventListener("click", closeViewer);
+vprev.addEventListener("click", () => { if (cur.page > 1) { cur.page--; render(); } });
+vnext.addEventListener("click", () => { if (cur.page < DOCS[cur.key].pages) { cur.page++; render(); } });
+viewer.addEventListener("click", (e) => { if (e.target === viewer || e.target.id === "vstage") closeViewer(); });
+document.addEventListener("keydown", (e) => {
+  if (!viewer.classList.contains("open")) return;
+  if (e.key === "Escape") closeViewer();
+  if (e.key === "ArrowLeft" && cur.page > 1) { cur.page--; render(); }
+  if (e.key === "ArrowRight" && cur.page < DOCS[cur.key].pages) { cur.page++; render(); }
+});
+// touch swipe
+let touchX = null;
+vimg.addEventListener("touchstart", (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+vimg.addEventListener("touchend", (e) => {
+  if (touchX === null) return;
+  const dx = e.changedTouches[0].clientX - touchX;
+  if (dx > 50 && cur.page > 1) { cur.page--; render(); }
+  else if (dx < -50 && cur.page < DOCS[cur.key].pages) { cur.page++; render(); }
+  touchX = null;
+}, { passive: true });
+</script>
+</body>
+</html>
