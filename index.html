@@ -486,7 +486,7 @@ const DOCS = {
   glenda:      { title: "Hurt Their Wallet",                meta: "Glenda Mitchell Law · Promotional Email", desc: "Personal-injury direct response written in second person from the first line. \u201CTheir negligence hurt you. Let us help you hurt their wallet.\u201D", pages: 1, dl: "downloads/GlendaMitchell_Promotional_Email.pdf" },
   oped_hunger:  { title: "Hunger Isn't The Story",   meta: "Ghostwritten for Ericka Gaines · Anti-Violence Partnership of Philadelphia", desc: "Written in the voice of a community-empowerment director making the case for why an anti-violence organization belongs at a food summit. Food insecurity as the soil that grows instability, trauma, and the cycle of violence.", pages: 1, dl: "downloads/Hunger_Isnt_The_Story.pdf" },
   oped_table:   { title: "Getting To The Table Was The Easy Part", meta: "Ghostwritten for Ken Myers · Co-Founder, M Movement", desc: "A founder's voice on the harder half of collaboration — honoring difference, extending grace, and the humility that turns a full room into a functioning one.", pages: 1, dl: "downloads/Getting_To_The_Table.pdf" },
-  oped_urgency: { title: "The Urgency of Connection", meta: "Ghostwritten for Ted Hewson · Co-Chair, Philadelphia Food Summit", desc: "A summit co-chair's argument that in a crisis, connection isn't a value — it's infrastructure. The piece that framed the entire event.", pages: 1, dl: "downloads/The_Urgency_Of_Connection.pdf" },
+  oped_urgency: { title: "We Don't Lack Compassion. We Lack Connection.", meta: "Ghostwritten for Ted Hewson · Published in The Philadelphia Citizen, July 2026", desc: "A summit co-chair's argument that in a crisis, connection isn't a value — it's infrastructure. The piece that framed the entire event.", pages: 1, dl: "downloads/The_Urgency_Of_Connection.pdf", link: "https://thephiladelphiacitizen.org/guest-commentary-we-have-compassion-lack-connection/" },
   bte:      { title: "Behind The Eye",               meta: "Docuseries Pitch",                               desc: "The experiences shape the artist. The artist shapes the work. The work shapes the world.", pages: 17, dl: "downloads/Behind_The_Eye.pdf" },
   places:   { title: "Places I Can't Go",            meta: "Limited Series Bible",                           desc: "She was taught to be invisible. It becomes the thing that saves her. Ten hours, five stages.", pages: 29, dl: "downloads/Places_I_Cant_Go.pdf" },
   lsh_campaign:   { title: "The House Phone — Campaign Copy", meta: "OOH · Social · Franchise Naming", desc: "The copy system inside the campaign: the four H\u2019s OOH line, the \u201CI Am You\u201D paired-portrait format, and five named content franchises built to repeat.", pages: 16, dl: "downloads/The_House_Phone_Pitch.pdf", assets: "lsh" },
@@ -515,11 +515,14 @@ for (const [gridId, keys] of Object.entries(GRIDS)) {
       <div class="body">
         <div class="idx">0${i + 1}</div>
         <h3>${d.title}</h3>
-        <div class="meta">${d.meta} · ${d.pages} page${d.pages > 1 ? "s" : ""}</div>
+        <div class="meta">${d.meta}${d.link ? "" : ` · ${d.pages} page${d.pages > 1 ? "s" : ""}`}</div>
         <p class="desc">${d.desc}</p>
-        <div class="open">Open the full piece &nearr;</div>
+        <div class="open">${d.link ? "Read the published piece" : "Open the full piece"} &nearr;</div>
       </div>`;
-    card.addEventListener("click", () => openViewer(key));
+    card.addEventListener("click", () => {
+      if (d.link) { window.open(d.link, "_blank", "noopener"); }
+      else { openViewer(key); }
+    });
     grid.appendChild(card);
   });
 }
