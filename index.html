@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="only light">
 <meta name="supported-color-schemes" content="light">
-<title>Don Jones Creative — Marketing Strategy · Brand · Copy</title>
-<meta name="description" content="Don Jones Creative is a marketing and brand practice in Atlanta. Content strategy, brand, and copy — with the measurement built in.">
-<meta property="og:title" content="Don Jones Creative — Marketing Strategy · Brand · Copy">
-<meta property="og:description" content="Content strategy, brand, and copy — with the measurement built in. Selected work 2020–2026.">
+<title>Don Jones Creative — Narrative Strategist &amp; Executive Ghostwriter</title>
+<meta name="description" content="Narrative strategy and executive ghostwriting for leaders and organizations with something consequential to say. Published work in The Philadelphia Citizen.">
+<meta property="og:title" content="Don Jones Creative — Narrative Strategist &amp; Executive Ghostwriter">
+<meta property="og:description" content="Narrative strategy, executive voice, and published thought leadership — including two placements in The Philadelphia Citizen.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://donjonescreative.netlify.app">
 <meta name="twitter:card" content="summary_large_image">
@@ -118,12 +118,56 @@
   header h1 .dot { color: var(--red); }
   .hero-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
   .hero-tabs .chyron { font-size: 13px; padding: 10px 18px 9px 19px; }
+  header h1.hero-title {
+    font-size: clamp(56px, 9.5vw, 138px);
+    max-width: 1180px;
+  }
+  .hero-title .amp {
+    color: var(--red);
+  }
   .hero-note {
-    margin-top: 22px;
+    margin-top: 24px;
+    margin-bottom: 44px;
+    max-width: 760px;
     font-family: "Newsreader", serif;
-    font-style: italic;
-    color: rgba(251,249,244,0.6);
-    font-size: 15px;
+    color: rgba(251,249,244,0.86);
+    font-size: clamp(18px, 2.1vw, 26px);
+    line-height: 1.35;
+  }
+
+  /* ============ PROOF STRIP ============ */
+  .proof-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--paper);
+    border-bottom: 2px solid var(--navy);
+  }
+  .proof {
+    padding: 28px 3vw 26px;
+    border-right: 1px solid var(--rule);
+  }
+  .proof:last-child { border-right: 0; }
+  .proof strong {
+    display: block;
+    font-family: "Anton", sans-serif;
+    color: var(--red);
+    font-size: clamp(30px, 4vw, 54px);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  .proof span {
+    display: block;
+    margin-top: 8px;
+    color: var(--navy);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  @media (max-width: 640px) {
+    .proof-strip { grid-template-columns: 1fr; }
+    .proof { border-right: 0; border-bottom: 1px solid var(--rule); padding: 20px 6vw; }
+    .proof:last-child { border-bottom: 0; }
   }
 
   /* ============ TICKER ============ */
@@ -297,48 +341,64 @@
 <nav>
   <a class="brand" href="#top">Don Jones Creative<span>.</span></a>
   <div class="links">
+    <a class="chyron" href="#ghostwriting">Published Work</a>
     <a class="chyron" href="#strategy">Strategy</a>
-    <a class="chyron" href="#brand">Brand</a>
     <a class="chyron" href="#copy">Copy</a>
-    <a class="chyron" href="#ghostwriting">Ghostwriting</a>
     <a class="chyron navy" style="border:1px solid rgba(251,249,244,0.4);" href="#contact">Contact</a>
   </div>
 </nav>
 
 <header id="top">
   <div class="hero-mark">
-    <span>Selected Work · 2020 – 2026</span>
-    <span>Atlanta, Georgia</span>
+    <span>Narrative Strategy · Executive Voice · Editorial Placement</span>
+    <span>Atlanta · Philadelphia</span>
   </div>
-  <h1 class="display">Don Jones<br>Creative<span class="dot">.</span></h1>
+  <h1 class="display hero-title">Narrative<br>Strategist <span class="amp">&amp;</span><br>Ghostwriter<span class="dot">.</span></h1>
+  <p class="hero-note">I help leaders find the argument only they can make — then shape it into a voice audiences trust and editors publish.</p>
   <div class="hero-tabs">
-    <a class="chyron" href="#strategy">Marketing Strategy</a>
-    <a class="chyron paper" href="#brand">Brand</a>
-    <a class="chyron" href="#copy">Copy</a>
-    <a class="chyron" href="#ghostwriting">Ghostwriting</a>
+    <a class="chyron" href="#ghostwriting">See Published Work</a>
+    <a class="chyron paper" href="#strategy">Narrative Strategy</a>
+    <a class="chyron" href="#contact">Build Your Voice</a>
   </div>
   <div class="ticker-wrap">
     <div class="ticker-inner">
-      Strategy&nbsp;·&nbsp;Story&nbsp;·&nbsp;Copy&nbsp;·&nbsp;Don&nbsp;Jones&nbsp;Creative&nbsp;·&nbsp;Strategy&nbsp;·&nbsp;Story&nbsp;·&nbsp;Copy&nbsp;·&nbsp;Don&nbsp;Jones&nbsp;Creative&nbsp;·&nbsp;Strategy&nbsp;·&nbsp;Story&nbsp;·&nbsp;Copy&nbsp;·&nbsp;Don&nbsp;Jones&nbsp;Creative&nbsp;·&nbsp;Strategy&nbsp;·&nbsp;Story&nbsp;·&nbsp;Copy&nbsp;·&nbsp;Don&nbsp;Jones&nbsp;Creative&nbsp;·&nbsp;
+      Narrative&nbsp;Strategy&nbsp;·&nbsp;Executive&nbsp;Ghostwriting&nbsp;·&nbsp;Published&nbsp;Thought&nbsp;Leadership&nbsp;·&nbsp;Don&nbsp;Jones&nbsp;Creative&nbsp;·&nbsp;Narrative&nbsp;Strategy&nbsp;·&nbsp;Executive&nbsp;Ghostwriting&nbsp;·&nbsp;Published&nbsp;Thought&nbsp;Leadership&nbsp;·&nbsp;Don&nbsp;Jones&nbsp;Creative&nbsp;·&nbsp;
     </div>
   </div>
 </header>
+
+<div class="proof-strip" aria-label="Selected credentials">
+  <div class="proof"><strong>2</strong><span>Philadelphia Citizen placements</span></div>
+  <div class="proof"><strong>3 voices</strong><span>Executive thought-leadership portfolio</span></div>
+  <div class="proof"><strong>CNN</strong><span>Live national television writing</span></div>
+</div>
 
 <!-- ============ POSITIONING ============ -->
 <section id="about">
   <div class="section-head">
     <div class="kicker"><span class="chyron navy">Who I Am, What I Do</span></div>
-    <h2 class="display">Strategy, story &amp; copy that move audiences <span style="color:var(--red);">&mdash; and prove it in the plan<span class="dot">.</span></span></h2>
-    <p class="lead serif">Don Jones Creative is a marketing and brand practice based in Atlanta. Client work spans hospitality, restaurant, nonprofit, and film — everything from portfolio-scale content architectures to single-campaign copy. Before founding the practice, I wrote for millions of viewers on live national television at CNN — a discipline in absorbing complexity fast, then landing the meaning in a line.</p>
+    <h2 class="display">Your expertise is the raw material<span style="color:var(--red);">. The story is the strategy<span class="dot">.</span></span></h2>
+    <p class="lead serif">I build narratives for executives, founders, and mission-driven organizations with something consequential to say. The work moves from discovery and argument to voice, structure, and publication — including two recent guest commentaries placed in <em>The Philadelphia Citizen</em>. Before founding Don Jones Creative, I wrote for millions of viewers on live national television at CNN, learning to absorb complexity fast and land the meaning in a line.</p>
   </div>
+</section>
+
+
+<!-- ============ EXECUTIVE GHOSTWRITING ============ -->
+<section id="ghostwriting">
+  <div class="section-head">
+    <div class="kicker"><span class="chyron navy">01 · Published Ghostwriting</span></div>
+    <h2 class="display" style="color:var(--navy);">Three leaders. Three voices. Two placements<span style="color:var(--red);">.</span></h2>
+    <p class="lead serif">Bylined thought leadership built from each leader's lived expertise and written in a voice that remains unmistakably their own. The portfolio below includes two guest commentaries published by <em>The Philadelphia Citizen</em> in July and August 2026.</p>
+  </div>
+  <div class="grid" id="grid-ghostwriting"></div>
 </section>
 
 <!-- ============ STRATEGY ============ -->
 <section id="strategy" class="on-navy">
   <div class="section-head">
-    <div class="kicker"><span class="chyron">01 · Marketing Strategy</span></div>
-    <h2 class="display">The engines behind the work<span class="dot">.</span></h2>
-    <p class="lead">Strategy engagements across hospitality, nonprofit, restaurant, and film. Tap any piece to read the full document.</p>
+    <div class="kicker"><span class="chyron">02 · Narrative &amp; Marketing Strategy</span></div>
+    <h2 class="display">The thinking behind the story<span class="dot">.</span></h2>
+    <p class="lead">Narrative and content systems across hospitality, nonprofit, restaurant, and film — designed to clarify the argument, align the audience, and make every execution pull in the same direction.</p>
   </div>
   <div class="grid" id="grid-strategy"></div>
 </section>
@@ -346,7 +406,7 @@
 <!-- ============ BRAND ============ -->
 <section id="brand">
   <div class="section-head">
-    <div class="kicker"><span class="chyron navy">02 · Brand</span></div>
+    <div class="kicker"><span class="chyron navy">03 · Brand Narrative</span></div>
     <h2 class="display" style="color:var(--navy);">One object. A whole brand<span style="color:var(--red);">.</span></h2>
     <p class="lead serif">The House Phone — a 125th-anniversary campaign that turns a Philadelphia nonprofit's invisible service into civic infrastructure: six free public phonebooths, a media brand, and a funnel, all working as one.</p>
   </div>
@@ -356,9 +416,9 @@
 <!-- ============ COPY: LINES (highlight reel) ============ -->
 <section id="copy" class="on-red">
   <div class="section-head">
-    <div class="kicker"><span class="chyron navy">03 · Copy</span></div>
-    <h2 class="display">Lines that land<span class="dot">.</span></h2>
-    <p class="lead">Sometimes the strategy is the sentence. Tap any line to open the piece it came from — then read the full work below.</p>
+    <div class="kicker"><span class="chyron navy">04 · Copy</span></div>
+    <h2 class="display">Lines that carry the argument<span class="dot">.</span></h2>
+    <p class="lead">Sometimes the strategy is the sentence. These are the lines that make an idea memorable, portable, and hard to ignore.</p>
   </div>
   <div class="lines">
     <button class="quote" data-doc="oped_hunger">
@@ -402,16 +462,6 @@
   <div class="grid" id="grid-clientcopy"></div>
 </section>
 
-<!-- ============ EXECUTIVE GHOSTWRITING ============ -->
-<section id="ghostwriting">
-  <div class="section-head">
-    <div class="kicker"><span class="chyron navy">Copy · Executive Ghostwriting</span></div>
-    <h2 class="display" style="color:var(--navy);">Three leaders. Three voices. One summit<span style="color:var(--red);">.</span></h2>
-    <p class="lead serif">Bylined thought-leadership op-eds written for three different executives across three organizations — each in that leader's own voice, each making a different argument for the same table. Authored for the 2026 Philadelphia Food Summit and pitched to <em>The Philadelphia Citizen</em> and <em>Generocity</em>.</p>
-  </div>
-  <div class="grid" id="grid-ghostwriting"></div>
-</section>
-
 <!-- ============ CAMPAIGN COPY ============ -->
 <section id="campaign" class="on-navy">
   <div class="section-head">
@@ -444,14 +494,14 @@
     </div>
     <div>
       <h4>Services</h4>
-      <p>Brand strategy &amp; positioning<br>Integrated campaign architecture<br>Content strategy &amp; operations<br>Copywriting, long &amp; short form<br>Pitch decks &amp; investor materials</p>
+      <p>Narrative strategy &amp; positioning<br>Executive ghostwriting<br>Thought leadership &amp; op-eds<br>Brand story &amp; messaging<br>Campaign concepts &amp; copy</p>
     </div>
   </div>
 </section>
 
 <footer>
   <span>© 2026 Don Jones Creative</span>
-  <span>Strategy · Story · Copy</span>
+  <span>Narrative Strategy · Ghostwriting · Copy</span>
 </footer>
 
 <!-- ============ VIEWER ============ -->
@@ -484,7 +534,7 @@ const DOCS = {
   pp_social:   { title: "Seasonal Social Captions",         meta: "Paperless Post · Instagram · Social Copy", desc: "Platform-native captions for seasonal event invitations \u2014 sunflower-field dinners and \u201Cno party like a (haunted) house party.\u201D", pages: 1, dl: "downloads/PaperlessPost_Social_Copy.pdf" },
   crunch:      { title: "One Size Fits All",                meta: "Crunch Fitness · Promotional Email", desc: "Offer-driven direct response: a gym experience you won\u2019t find anywhere else, for only $9.95/month. Price point, proof, and a free-pass CTA.", pages: 1, dl: "downloads/CrunchFitness_Promotional_Email.pdf" },
   glenda:      { title: "Hurt Their Wallet",                meta: "Glenda Mitchell Law · Promotional Email", desc: "Personal-injury direct response written in second person from the first line. \u201CTheir negligence hurt you. Let us help you hurt their wallet.\u201D", pages: 1, dl: "downloads/GlendaMitchell_Promotional_Email.pdf" },
-  oped_hunger:  { title: "Hunger Isn't The Story",   meta: "Ghostwritten for Ericka Gaines · Anti-Violence Partnership of Philadelphia", desc: "Written in the voice of a community-empowerment director making the case for why an anti-violence organization belongs at a food summit. Food insecurity as the soil that grows instability, trauma, and the cycle of violence.", pages: 1, dl: "downloads/Hunger_Isnt_The_Story.pdf" },
+  oped_hunger:  { title: "Hunger Feeds Violence",   meta: "Ghostwritten for Ericka Gaines · Published in The Philadelphia Citizen, August 2026", desc: "A community-empowerment director's case that food insecurity is not adjacent to violence prevention — it is one of the conditions that shapes violence upstream.", pages: 1, dl: "downloads/Hunger_Isnt_The_Story.pdf", link: "https://thephiladelphiacitizen.org/guest-commentary-hunger-feeds-violence/" },
   oped_table:   { title: "Getting To The Table Was The Easy Part", meta: "Ghostwritten for Ken Myers · Co-Founder, M Movement", desc: "A founder's voice on the harder half of collaboration — honoring difference, extending grace, and the humility that turns a full room into a functioning one.", pages: 1, dl: "downloads/Getting_To_The_Table.pdf" },
   oped_urgency: { title: "We Don't Lack Compassion. We Lack Connection.", meta: "Ghostwritten for Ted Hewson · Published in The Philadelphia Citizen, July 2026", desc: "A summit co-chair's argument that in a crisis, connection isn't a value — it's infrastructure. The piece that framed the entire event.", pages: 1, dl: "downloads/The_Urgency_Of_Connection.pdf", link: "https://thephiladelphiacitizen.org/guest-commentary-we-have-compassion-lack-connection/" },
   bte:      { title: "Behind The Eye",               meta: "Docuseries Pitch",                               desc: "The experiences shape the artist. The artist shapes the work. The work shapes the world.", pages: 17, dl: "downloads/Behind_The_Eye.pdf" },
@@ -529,7 +579,11 @@ for (const [gridId, keys] of Object.entries(GRIDS)) {
 
 // Clickable lines → open source document
 document.querySelectorAll(".quote[data-doc]").forEach(el => {
-  el.addEventListener("click", () => openViewer(el.dataset.doc));
+  el.addEventListener("click", () => {
+    const d = DOCS[el.dataset.doc];
+    if (d.link) window.open(d.link, "_blank", "noopener");
+    else openViewer(el.dataset.doc);
+  });
 });
 
 // Viewer
